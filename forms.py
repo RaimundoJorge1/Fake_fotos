@@ -27,3 +27,5 @@ class FormCriarConta(FlaskForm):
 class FormFoto(FlaskForm):
     foto = FileField("Foto", validators=[DataRequired()])
     botao_confirmacao = SubmitField("Enviar")
+
+#Testando o Git
