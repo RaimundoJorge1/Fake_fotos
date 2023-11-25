@@ -2,9 +2,9 @@
 
 bcrypt
 
-datashape==0.5.4
+datashape
 
-et-xmlfile==1.1.0
+
 Flask==3.0.0
 Flask-Bcrypt==1.0.1
 Flask-Login==0.6.3
