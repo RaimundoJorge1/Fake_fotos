@@ -27,7 +27,7 @@ ply
 pyarrow
 PyDispatcher
 pyls-spyder
-PyQtWebEngine
+
 python-lsp-jsonrpc
 queuelib
 scipy
