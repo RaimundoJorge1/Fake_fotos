@@ -1,6 +1,6 @@
 
 
-bcrypt @ file:///C:/ci_311/bcrypt_1676435170049/work
+bcrypt
 
 certifi @ file:///C:/b/abs_36eb5mzhph/croot/certifi_1690232276943/work/certifi
 
