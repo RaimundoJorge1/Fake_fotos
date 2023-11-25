@@ -2,20 +2,9 @@
 
 bcrypt
 
-certifi @ file:///C:/b/abs_36eb5mzhph/croot/certifi_1690232276943/work/certifi
-
-comm @ file:///C:/ci_311/comm_1678376562840/work
-
-
-
-
 datashape==0.5.4
 
 et-xmlfile==1.1.0
-
-fastjsonschema @ file:///C:/ci_311/python-fastjsonschema_1679500568724/work
-filelock @ file:///C:/ci_311/filelock_1676427284139/work
-flake8 @ file:///C:/ci_311/flake8_1678376624746/work
 Flask==3.0.0
 Flask-Bcrypt==1.0.1
 Flask-Login==0.6.3
@@ -29,56 +18,21 @@ gunicorn==21.2.0
 inflection==0.5.1
 
 itsdangerous==2.1.2
-
-json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
-jsonpatch @ file:///tmp/build/80754af9/jsonpatch_1615747632069/work
 jsonpointer==2.1
-jsonschema @ file:///C:/b/abs_d40z05b6r1/croot/jsonschema_1678983446576/work
-
-
-
-
-
 mkl-service==2.4.0
-
 munkres==1.1.4
-
-
-numpy @ file:///C:/Users/dev-admin/mkl/numpy_and_numpy_base_1682982345978/work
-
-
 patsy==0.5.3
 pep8==1.7.1
-
 ply==3.11
-
 pyarrow==11.0.0
-
 PyDispatcher==2.0.5
-
 pyls-spyder==0.4.0
-
 PyQtWebEngine==5.15.4
-
 python-lsp-jsonrpc==1.0.0
-
-
-
 queuelib==1.5.0
-
-
 scipy==1.11.1
-
-
 TBB==0.2
-
-
-
 webencodings==0.5.1
-websocket-client @ file:///C:/ci_311/websocket-client_1676426063281/work
 Werkzeug==3.0.1
-
 WTForms==3.1.1
-
-zope.interface @ file:///C:/ci_311/zope.interface_1676439868776/work
 zstandard==0.19.0
