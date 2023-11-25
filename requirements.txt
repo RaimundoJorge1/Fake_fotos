@@ -1,6 +1,5 @@
 
 bcrypt
-datashape
 Flask
 Flask-Bcrypt
 Flask-Login
