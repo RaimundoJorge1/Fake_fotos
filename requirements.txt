@@ -8,10 +8,11 @@ Flask-Login
 Flask-SQLAlchemy
 Flask-WTF
 gunicorn
-itsdangerous
+
 jsonpointer
-mkl-service
+
 python-lsp-jsonrpc
 Werkzeug
-WTForms
+
+
 
