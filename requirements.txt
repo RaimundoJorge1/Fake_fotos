@@ -1,5 +1,4 @@
 
-
 bcrypt
 datashape
 Flask
@@ -9,6 +8,6 @@ Flask-SQLAlchemy
 Flask-WTF
 gunicorn
 Werkzeug
-
+freeze
 
 
