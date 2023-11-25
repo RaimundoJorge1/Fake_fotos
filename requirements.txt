@@ -5,34 +5,34 @@ bcrypt
 datashape
 
 
-Flask==3.0.0
-Flask-Bcrypt==1.0.1
-Flask-Login==0.6.3
-Flask-SQLAlchemy==3.1.1
-Flask-WTF==1.2.1
-fonttools==4.25.0
+Flask
+Flask-Bcrypt
+Flask-Login
+Flask-SQLAlchemy
+Flask-WTF
+fonttools
 
-gunicorn==21.2.0
+gunicorn
 
 
-inflection==0.5.1
+inflection
 
-itsdangerous==2.1.2
-jsonpointer==2.1
-mkl-service==2.4.0
-munkres==1.1.4
-patsy==0.5.3
-pep8==1.7.1
-ply==3.11
-pyarrow==11.0.0
-PyDispatcher==2.0.5
-pyls-spyder==0.4.0
-PyQtWebEngine==5.15.4
-python-lsp-jsonrpc==1.0.0
-queuelib==1.5.0
-scipy==1.11.1
-TBB==0.2
-webencodings==0.5.1
-Werkzeug==3.0.1
-WTForms==3.1.1
-zstandard==0.19.0
+itsdangerous
+jsonpointer
+mkl-service
+munkres
+patsy
+pep8
+ply
+pyarrow
+PyDispatcher
+pyls-spyder
+PyQtWebEngine
+python-lsp-jsonrpc
+queuelib
+scipy
+TBB
+webencodings
+Werkzeug
+WTForms
+zstandard
