@@ -8,10 +8,6 @@ Flask-Login
 Flask-SQLAlchemy
 Flask-WTF
 gunicorn
-
-jsonpointer
-
-python-lsp-jsonrpc
 Werkzeug
 
 
