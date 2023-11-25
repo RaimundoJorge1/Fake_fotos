@@ -4,6 +4,7 @@ from flask_login import login_required, login_user, logout_user, current_user
 from Fkj.forms import Formlogin, FormCriarConta, FormFoto
 from Fkj.models import Usuario, Foto
 import os
+import sqlite3
 from werkzeug.utils import secure_filename
 #import io
 
@@ -34,17 +35,14 @@ def criarconta():
 @app.route("/perfil/<id_usuario>", methods=["GET", "POST"])
 @login_required
 def perfil(id_usuario):
+    fotos = Foto.query.order_by(Foto.data_criacao.desc()).all()[:20]
     if int(id_usuario) == int(current_user.id):
        # O usuário está vendo o perfil dele
        form_foto = FormFoto()
+
        if form_foto.validate_on_submit():
            arquivo = form_foto.foto.data
-           #filename=request.form['foto']
            nome_seguro = secure_filename(arquivo.filename)
-           #print(type(nome_seguro))
-           #print("Arquivo", arquivo)
-           #print(nome_seguro)
-           #salvar o arquivo na pasta file_post
            caminho = os.path.join(os.path.abspath(os.path.dirname(__file__)),
                            app.config["UPLOAD_FOLDER"], nome_seguro)
            print(caminho)
@@ -53,10 +51,15 @@ def perfil(id_usuario):
            foto = Foto(imagem=nome_seguro, id_usuario=current_user.id)
            database.session.add(foto)
            database.session.commit()
-       return render_template("perfil.html", usuario=current_user, form=form_foto)
+
+
+
+       return render_template("perfil.html", usuario=current_user, form=form_foto, fotos=fotos)
+
     else:
-        usuario=Usuario.query.get(int(id_usuario))
-        return render_template("perfil.html", usuario=usuario, form=None)
+     usuario=Usuario.query.get(int(id_usuario))
+     return render_template("perfil.html", usuario=usuario, form=None, fotos=fotos)
+
 
 @app.route("/logout")
 @login_required
@@ -67,5 +70,5 @@ def logout():
 @app.route("/feed")
 @login_required
 def feed():
-    fotos = Foto.query.order_by(Foto.data_criacao.desc()).all()[:10]
+    fotos = Foto.query.order_by(Foto.data_criacao.desc()).all()[:20]
     return render_template("feed.html", fotos=fotos)

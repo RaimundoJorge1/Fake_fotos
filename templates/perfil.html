@@ -1,10 +1,11 @@
 git {% extends "homepage.html" %}
 
 {% block titulo %}
-Perfil - {{ usuario.username }}
+  Perfil - {{ usuario.username }}
 {% endblock %}
 
 {% block body %}
+
 <body>
 {% include "navbar.html" %}
 <div class="container">
@@ -16,16 +17,17 @@ Perfil - {{ usuario.username }}
           {{ form.csrf_token }}
         <h2>{{ usuario.username }} - Enviar foto</h2>
 
-        <div class="bloco-arquivo">
+          <div class="bloco-arquivo">
             <label for="foto" class="botao-arquivo">
               Escolher arquivo
                 {{ form.foto(class="input-arquivo", id="foto") }}
             </label>
             <span id="imagem-arquivo" class=""></span>
           </div>
-
           {{ form.botao_confirmacao(class="botao-login") }}
-        </form>
+
+
+      </form>
 
 {% else %}
   <div class="bloco-add-img">
@@ -37,9 +39,9 @@ Perfil - {{ usuario.username }}
 
  <div class="conteudo">
    {% for foto in usuario.fotos %}
-     <div class="bloco-imagem">
-        <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}" />
-     </div>
+      <div class="bloco-imagem">
+        <img src="{{ url_for('static', filename='fotos_post/{}'.format(foto.imagem)) }}" />
+      </div>
    {% endfor %}
  </div>
 
