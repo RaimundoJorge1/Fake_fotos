@@ -10,9 +10,14 @@
       <div class="conteudo">
 
         {% for foto in fotos %}
-          <a href="{{ url_for('perfil' , id_usuario = foto.id_usuario) }}" class="bloco-imagem">
+          <a href="{{ url_for('delete_foto' , id_usuario = foto.id_usuario) }}" class="bloco-imagem">
             <img src="{{ url_for('static', filename='fotos_post/{}'.format(foto.imagem)) }}" />
           </a>
+          <form action="{{ url_for('delete_photo') }}" method="POST">
+              {{ form.csrf_token }}
+              <input type="hidden" name="Foto" value={{ foto }}>
+              <img src="photo.jpg" onclick="this.parentNode.submit();">
+         </form>
        {% endfor %}
 
       </div>
@@ -20,5 +25,3 @@
   </body>
 
 {% endblock %}
-
-

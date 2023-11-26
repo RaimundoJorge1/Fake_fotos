@@ -1,0 +1,8 @@
+@app.route('/delete_foto', methods=['POST'])
+@login_required
+def delete_foto():
+    foto_id = request.form['foto']
+    foto = id_usuario.query.get(foto_id)
+    db.session.delete(foto)
+    db.session.commit()
+    return 'Foto excluída com sucesso!'

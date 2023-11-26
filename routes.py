@@ -4,7 +4,8 @@ from flask_login import login_required, login_user, logout_user, current_user
 from Fkj.forms import Formlogin, FormCriarConta, FormFoto
 from Fkj.models import Usuario, Foto
 import os
-import sqlite3
+#from app import db
+#from models import Foto
 from werkzeug.utils import secure_filename
 #import io
 
@@ -72,3 +73,12 @@ def logout():
 def feed():
     fotos = Foto.query.order_by(Foto.data_criacao.desc()).all()[:20]
     return render_template("feed.html", fotos=fotos)
+
+@app.route('/delete_foto', methods=['POST'])
+@login_required
+def delete_foto():
+    foto_id = request.form['foto']
+    foto = id_usuario.query.get(foto_id)
+    db.session.delete(foto)
+    db.session.commit()
+    return 'Foto excluída com sucesso!'
