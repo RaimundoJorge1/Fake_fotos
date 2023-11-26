@@ -12,7 +12,6 @@ click
 colorama
 dnspython
 email-validator
-
 idna
 importlib-metadata
 itsdangerous
@@ -21,7 +20,6 @@ MarkupSafe
 packaging
 SQLAlchemy
 typing_extensions
-
 WTForms
 zipp
 
