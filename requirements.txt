@@ -7,7 +7,6 @@ Flask-WTF
 gunicorn
 Werkzeug
 
-
 click
 colorama
 dnspython
@@ -22,4 +21,6 @@ SQLAlchemy
 typing_extensions
 WTForms
 zipp
+#Minha biblioteca
+#Teste de subida
 
