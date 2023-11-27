@@ -1,11 +1,10 @@
+import sys
+sys.path.append('/path/Fkj')
 from flask import render_template, url_for, redirect, request
-from Fkj import app, database, bcrypt
 from flask_login import login_required, login_user, logout_user, current_user
 from Fkj.forms import Formlogin, FormCriarConta, FormFoto
 from Fkj.models import Usuario, Foto
 import os
-#from app import db
-#from models import Foto
 from werkzeug.utils import secure_filename
 #import io
 
